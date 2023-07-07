@@ -1,0 +1,14 @@
+lex program
+
+lex name.l
+cc lex.yy.c
+./a.out
+
+
+yacc pgm
+
+
+lex name.l
+yacc -d name.y
+cc lex.yy.c y.tab.c -ll
+./a.out
