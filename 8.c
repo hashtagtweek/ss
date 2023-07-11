@@ -15,7 +15,6 @@ int completed[p];
 int safeSequence[p];
 int count = 0;
 
-// Input allocation matrix
 printf("Enter the allocation matrix:\n");
 for (int i = 0; i < p; i++) {
 for (int j = 0; j < r; j++) {
@@ -24,7 +23,6 @@ scanf("%d", &allocated[i][j]);
 completed[i] = 0;
 }
 
-// Input maximum matrix
 printf("Enter the maximum matrix:\n");
 for (int i = 0; i < p; i++) {
 for (int j = 0; j < r; j++) {
@@ -33,7 +31,7 @@ need[i][j] = max[i][j] - allocated[i][j];
 }
 }
 
-// Input available resources
+
 printf("Enter the available resources:\n");
 for (int i = 0; i < r; i++) {
 scanf("%d", &avail[i]);
