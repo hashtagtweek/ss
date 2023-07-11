@@ -24,3 +24,16 @@ main() {
 FILE *myfile = fopen("sam_input.c", "r");
 if (!myfile) {
 printf("I can't open sam_input.c!");
+return -1;
+}
+yyin = myfile;
+do {
+yyparse();
+} while (!feof(yyin));
+printf("numbers = %d\nKeywords = %d\nIdentifiers = %d\noperators =
+%d\n",
+dig, key,id, op);
+}
+void yyerror() {
+printf("EEK, parse error! Message: ");
+}
