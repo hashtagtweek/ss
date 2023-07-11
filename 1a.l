@@ -13,18 +13,19 @@ int v=0,op=0,id=0,flag=0;
 %%
 int main()
 {
-	printf("Enter the expression:\n");
-	yylex();
-	if((op+1) ==id && v==0)
-	{
-		printf("\n\nIdentifiers are:%d\nOperators are:%d\n",id,op);
-		printf("\nExpression is Valid\n");
-	}
-	else
-		printf("\nExpression is Invalid\n");
-	return 1;
+printf("Enter the expression:\n");
+yylex();
+if((op+1) ==id && v==0)
+{
+printf("\n\nIdentifiers are:%d\nOperators are:%d\n",id,op);
+printf("\nExpression is Valid\n");
+}
+else
+printf("\nExpression is Invalid\n");
+return 1;
 }
 int yywrap()
 {
-	return 1;
-}  
+return 1;
+}
+
